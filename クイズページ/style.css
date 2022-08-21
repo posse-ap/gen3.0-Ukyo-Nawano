@@ -229,6 +229,13 @@ a {
   border-radius: 8px;
   /* margin: 16px 70px; */
   width: 100%;
+  height:80px;
+  background-image: url('../img/icon-note.png');
+  background-repeat: no-repeat;
+  padding-left: 75px;
+  font-weight: bold;
+  font-size: 18px;
+  background-position: left 3% bottom 50%;
   /* margin-bottom: 128px; */
 }
 .quizNote {
