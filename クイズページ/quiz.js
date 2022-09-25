@@ -5,7 +5,7 @@
     const mainImage=document.getElementById('quizPicture');
     // const image=document.getElementsByClassName("quizMain")
     const choices = document.getElementsByClassName("quizAnswer");
-    const note=document.getElementById("quizCite");
+    
     // const answerResultF = document.getElementsByClassName("answerResult");
     // const answerResultT = document.getElementsByClassName("answerResultRight");
     
@@ -54,63 +54,95 @@
 ];
 let currentNum = 0;
 
+const result=[
+    "約79万人","X-TECH","Integrate into Technology","Society5.0","メタバース","約5倍"
+];
 
-// 画像表示
-// const image=[
-//     '../img/img-quiz01.png',
-//     '../img/img-quiz02.png',
-//     '../img/img-quiz03.png',
-//     '../img/img-quiz04.png',
-//     '../img/img-quiz05.png',
-//     '../img/img-quiz06.png',
-// ];
-// let currentIndex=0;
-// const mainImage=document.getElementById('quizPicture');
-// mainImage.src=image[currentIndex];
-// 正解表示
-document.getElementById("answerResult").style.display ="none";
-document.getElementById("answerResultRight").style.display ="none";
-function checkAnswer(li){
-    if(isAnswered===true){
-        return;
+
+
+const template=document.getElementById("js-template");
+for (let i = 0; i < quizSet.length; i++) {
+const content=template.content.cloneNode(true);
+content.querySelector(".quizQuiz").textContent=quizSet[i].q;
+content.querySelector(".quizPicture").src=quizSet[i].image;
+content.querySelector(".answerChoiceOne").innerHTML=quizSet[i].a[0];
+content.querySelector(".answerChoiceTwo").innerHTML=quizSet[i].a[1];
+content.querySelector(".answerChoiceThree").innerHTML=quizSet[i].a[2];
+content.querySelector(".quizCite").textContent=quizSet[i].n;
+content.getElementById("answerResult").style.display ="none";
+content.getElementById("answerResultRight").style.display ="none";
+
+// content.querySelector(".quizOne").setAttribute("data-quiz" ,i);
+document.getElementById("js-content").appendChild(content);
+};
+
+
+// const li=document.getElementById("button1");
+const quizBlock=document.querySelectorAll(".quizOne");
+console.log(quizBlock);
+quizBlock.forEach(function(num)
+{
+    
+        const li=num.querySelectorAll(".button");
+        console.log(li);
+        li.forEach(function(r){
+        function checkAnswer(r){
+            if(isAnswered===true){
+                return;
+            }
+            isAnswered=true;
+            if(r.textContent===result[i-1]){
+                r.classList.add('correct');
+                document.getElementById('answerResultRight').style.display="block";
+                console.log("正解");
+            }else{
+                r.classList.add('correct');
+                document.getElementById('answerResult').style.display="block";
+        
+            }
+        
+        r.addEventListener("click",()=>{
+            checkAnswer(r);
+        });
     }
-    isAnswered=true;
-    if(li.textContent===quizSet[currentNum].a[1]){
-        li.classList.add('correct');
-        document.getElementById('answerResultRight').style.display="block";
-        // document.getElementById('correct').style.display="none";
-    }else{
-        li.classList.add('correct');
-        document.getElementById('answerResult').style.display="block";
 
-    }
-}
+    
+})});
 
-function setQuiz(){
-    isAnswered = false;
-    question.textContent=quizSet[currentNum].q;
+if(quizSet.quizNumber===1,2,4){
+    template.content.getElementById(".quizCite").style.display ="none";
+}else{
+    template.content.getElementById(".quizCite").style.display ="none";
+};
 
-    let currentIndex=0;
-    const mainImage=document.getElementById('quizPicture');
-    mainImage.src=quizSet[currentIndex].image;
 
-    note.textContent=quizSet[currentNum].n;
 
-    quizSet[currentNum].a.forEach(choice=>{
-        let li=document.createElement("li");
-        li.textContent=choice;
 
-        li.addEventListener("click",()=>{
-            checkAnswer(li);
-        })
+// function setQuiz(){
+//     isAnswered = false;
+//     question.textContent=quizSet[currentNum].q;
 
-        choices[currentNum].appendChild(li);
-    });
-}
-setQuiz();
+//     let currentIndex=0;
+//     const mainImage=document.getElementById('quizPicture');
+//     mainImage.src=quizSet[currentIndex].image;
 
-for(let i=0; i<1; i++){
-    setQuiz(i);}
+//     note.textContent=quizSet[currentNum].n;
+
+//     quizSet[currentNum].a.forEach(choice=>{
+//         let li=document.createElement("li");
+//         li.textContent=choice;
+
+//         li.addEventListener("click",()=>{
+//             checkAnswer(li);
+//         })
+
+//         choices[currentNum].appendChild(li);
+//     });
+// }
+// setQuiz();
+
+// for(let i=0; i<1; i++){
+//     setQuiz(i);}
 
 // function createQuiz(){
 //     const quizBlock= document.getElementById('quizOne');
@@ -128,7 +160,7 @@ for(let i=0; i<1; i++){
 
 
 
-console.log(setQuiz);
+console.log(checkAnswer);
     // for (let currentNum = 0; currentNum < quizSet.length; currentNum++) {
     // Set(currentNum);
     // checkAnswer(currentNum);

@@ -50,74 +50,80 @@
         </div>
     </div>
     <main class="main">
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q1
-                </h1>
-                <p class="quizQuiz" id="quizQuiz">
-                    <!-- 日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？ -->
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="" id="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
-                </div>
-            </div>
-            <div class="quizBlock">
-                <ul class="quizAnswer" id="quizAnswer">
-                    <!-- <li class="answerChoice">
-                        約28万人
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        <button>
+        <section id="js-content" >
+            <template id="js-template" class="js-template">
+                <div class="quizOne" id="quizOne">
+                    <div class="quizText">
+                        <h1 class="quizMidasi">
+                            Q
+                        </h1>
+                        <p class="quizQuiz" id="quizQuiz">
+                            <!-- 日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？ -->
+                        </p>
+                    </div>
+                    <div class="quizMain">
+                        <img src="" class="quizPicture">
+                    </div>
+                    <div class="answerIconBack">
+                        <div class="answerIcon quizText">
+                            A
+                        </div>
+                    </div>
+                    <div class="quizBlock">
+                        <ul class="quizAnswer" id="quizAnswer">
+                            <li class="answerChoiceOne button">
+                                <!-- 約28万人
+                                <img src="../img/icon-arrow.png" class="arrow"> -->
+                            </li>
+                            <li class="answerChoiceTwo button"> 
+                                <!-- <button>
+                                    約79万人
+                                </button>
+                                <img src="../img/icon-arrow.png" class="arrow"> -->
+                            </li>
+                            <li class="answerChoiceThree button">
+                                <!-- 約183万人
+                                <img src="../img/icon-arrow.png" class="arrow"> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="answerResult" class="answerResult">
+                        <h2 class="result">
+                            不正解...
+                        </h2>
+                    <div class="answerBlock">
+                        <div class="answerFont">
+                            A
+                        </div>
+                        <p class="answerText">
                             約79万人
-                        </button>
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        約183万人
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li> -->
-                </ul>
-            </div>
-            <div id="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
+                        </p>
+                    </div> 
+                    </div>
+                    <div id="answerResultRight" class="answerResultRight">
+                        <h2 class="resultRight result">
+                            正解 !
+                        </h2>
+                    <div class="answerBlock">
+                        <div class="answerFont">
+                            A
+                        </div>
+                        <p class="answerText">
+                            約79万人
+                        </p>
+                    </div> 
+                    </div>
+                    <div class="quizCite" id="quizCite">
+                        <!-- <img src="../img/icon-note.png" class="quizNote">
+                        <p class="quizCiteText">
+                            経済産業省 2019年3月 － IT 人材需給に関する調査 -->
+                        
+                    </div>
                 </div>
-                <p class="answerText">
-                    約79万人
-                </p>
-            </div> 
-            </div>
-            <div id="answerResultRight">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    約79万人
-                </p>
-            </div> 
-            </div>
-            <div class="quizCite" id="quizCite">
-                <!-- <img src="../img/icon-note.png" class="quizNote">
-                <p class="quizCiteText">
-                    経済産業省 2019年3月 － IT 人材需給に関する調査 -->
-                </p>
-            </div>
-        </div>
+            </template>
+        </section>
+        
+        
         <div class="quizOne">
             <div class="quizText">
                 <h1 class="quizMidasi">

@@ -127,7 +127,7 @@ a {
   text-align: center;
   margin-top: 64px;
 }
-#quizPicture {
+.quizPicture {
   width: 700px;
 }
 .answerIconBack {
