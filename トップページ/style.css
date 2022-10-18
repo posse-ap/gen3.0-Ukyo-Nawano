@@ -5,15 +5,27 @@ body {
 .header {
   display: flex;
   padding-left: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   position: fixed;
-  z-index: 1;
+  z-index:1;
   background-color: white;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+.lineHeader{
+  display: none;
+}
+.headerSite{
+  display:none;
+}
+.posseLogo {
+  padding-left: 10px;
+  z-index: 90;
 }
 .topHeader {
   display: flex;
-  margin-left: 700px;
 }
 a {
   text-decoration: none;
@@ -28,6 +40,11 @@ a {
 .ulLogo {
   display: flex;
   list-style: none;
+}
+.ulSNS{
+  display: flex;
+  list-style: none;
+  padding-right: 24px;
 }
 .twitter {
   width: 50px;
@@ -61,7 +78,15 @@ a {
 a {
   color: black;
 }
-/* ここからmainページ */
+#headerButtonClick {
+  display: none;
+}
+
+/* ここからheroページ */
+main {
+  width: 984px;
+  margin: 0 auto;
+}
 .heroMain {
   display: flex;
   padding-top: 100px;
@@ -70,10 +95,10 @@ a {
   align-self: center;
   background-color: rgb(236, 235, 239);
   border-radius: 24px;
-  display: inline-block;
   padding: 50px 62px;
   white-space: nowrap;
-  position: relative;
+  margin: 0 auto;
+  z-index: 0;
 }
 .heroTitle {
   color: rgb(70, 137, 239);
@@ -101,7 +126,8 @@ a {
 .heroScroll {
   color: gray;
   bottom: -80px;
-  position: absolute;
+  margin-left: 30px;
+  list-style: disc;
 }
 .heroScrollSpan {
   color: black;
@@ -118,19 +144,21 @@ a {
 .mainHsub {
   color: #0071bc;
   font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 40px;
 }
-.mainText{
+.mainText {
   display: flex;
   align-items: center;
-  justify-content:center;
-  gap:40px;
+  justify-content: center;
+  gap: 40px;
 }
-.mainPicture{
-  width:470px;
-  height:310px;
+.mainPicture {
+  width: 100%;
+  height: 100%;
   border-radius: 16px;
 }
-.mainP{
+.mainP {
   line-height: 1.8;
   font-size: 14px;
   width: 470px;
@@ -163,20 +191,18 @@ a {
   border-radius: 56px;
   position: absolute;
 }
-.lineLm {
-  margin-left: 327px;
-}
 .lineMainIcon {
   width: 40px;
   height: 40px;
   border-radius: 5px;
   position: absolute;
+  left: 35%;
 }
-.lineMidasi {
-  margin: 0 auto;
+.lineTitle {
   position: absolute;
-  padding-left: 50px;
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: bold;
+  left: 40%;
   color: white;
 }
 .lineMainText {
@@ -189,6 +215,11 @@ a {
   line-height: 1.8;
   color: white;
 }
+.lineMainLink {
+  position: absolute;
+  top: 80%;
+  left: 35%;
+}
 .lineWhite {
   position: absolute;
   display: flex;
@@ -198,25 +229,24 @@ a {
   height: 50px;
   padding: 12px;
   justify-content: center;
-  top: 300px;
 }
 .lined {
   width: 12px;
   height: 12px;
   position: absolute;
   right: 30px;
-  top:30px;
+  top: 18px;
 }
 .lineMainLink {
   align-items: center;
   background-color: white;
 }
-/* ここからフッター */
+
+/* ここからLINEフッター */
 .lineLink {
   color: white;
   display: flex;
   align-items: center;
-  background-color: rgb(95, 223, 91);
 }
 .lineIcon {
   width: 36px;
@@ -246,9 +276,11 @@ a {
   color: white;
   margin-left: 25px;
 }
+
 /* ここからPOSSEロゴフッター */
-.footer{
-margin: 0 auto;
+.footer {
+  width: 984px;
+  margin: 0 auto;
 }
 .posseLogoFooter {
   text-align: center;
