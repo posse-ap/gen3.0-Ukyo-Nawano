@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,14 +21,34 @@
         <div class="posseLogo">
             <img src="../img/logo.png" alt="POSSE">
         </div>
+        <input type="checkbox" id="headerButtonClick"></input>
+        <label for="headerButtonClick" class="headerButtonOpen">
+            <span></span>
+        </label>
         <nav class="topHeader">
             <ul class="ulLogo">
                 <li class="topPage">
-                    <a href="../トップページ/toppage.html">POSSEについて</a>
+                    <a href="../トップページ/toppage.html">POSSEとは</a>
                 </li>
                 <li class="topQuiz">
                     <a href="../クイズページ/quiz.html">クイズ</a>
                 </li>
+            </ul>
+            <div class="lineHeader">
+                <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer"
+                    class="lineHeaderLink">
+                    <img src="../img/lineicon.png" class="lineHeaderIcon">
+                    <span class="lineHeaderText">
+                        POSSE公式LINEを追加
+                    </span>
+                    <img src="../img/icon-link-light.png" class="lineHeaderLight">
+            </div>
+            </a>
+            <a href="" class="headerSite">
+                POSSE 公式サイト
+                <img src="../img/icon-link-dark.png" class="LineHeaderDark">
+            </a>
+            <ul class="ulSNS">
                 <li class="twitter">
                     <a href="https://twitter.com/posse_program"><img src="../img/icon-twitter.png" alt="twitter"
                             class="twitterIcon"></a>
@@ -39,6 +60,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="itHero">
         <div class="quizHero">
             <p class="posseAssessment">
@@ -50,392 +72,75 @@
         </div>
     </div>
     <main class="main">
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q1
-                </h1>
-                <p class="quizQuiz" id="quizQuiz">
-                    <!-- 日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？ -->
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="" id="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
+        <section id="js-content">
+            <template id="js-template" class="js-template">
+                <div class="quizOne" id="quizOne">
+                    <div class="quizText">
+                        <h1 class="quizIcon">
+                        </h1>
+                        <p class="quizQuiz" id="quizQuiz">
+                        </p>
+                    </div>
+                    <div class="quizMain">
+                        <img src="" class="quizPicture">
+                    </div>
+                    <div class="answerIconBack">
+                        <div class="answerIcon quizText">
+                            A
+                        </div>
+                    </div>
+                    <div class="quizBlock">
+                        <ul class="quizAnswer" id="quizAnswer">
+                            <li>
+                                <button class="answerChoiceOne button">
+                                </button>
+                            </li>
+                            <li>
+                                <button class="answerChoiceTwo button">
+                                </button>
+                            </li>
+                            <li>
+                                <button class="answerChoiceThree button">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="answerResultFalse">
+                        <h2 class="result">
+                            不正解...
+                        </h2>
+                        <div class="answerBlock">
+                            <div class="answerFont">
+                                A
+                            </div>
+                            <p class="answerText">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answerResultRight">
+                        <h2 class="resultRight result">
+                            正解 !
+                        </h2>
+                        <div class="answerBlock">
+                            <div class="answerFont">
+                                A
+                            </div>
+                            <p class="answerText answerTextRight">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="quizCite" id="quizCite">
+                    </div>
                 </div>
-            </div>
-            <div class="quizBlock">
-                <ul class="quizAnswer" id="quizAnswer">
-                    <!-- <li class="answerChoice">
-                        約28万人
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        <button>
-                            約79万人
-                        </button>
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        約183万人
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li> -->
-                </ul>
-            </div>
-            <div id="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    約79万人
-                </p>
-            </div> 
-            </div>
-            <div id="answerResultRight">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    約79万人
-                </p>
-            </div> 
-            </div>
-            <div class="quizCite">
-                <!-- <img src="../img/icon-note.png" class="quizNote">
-                <p class="quizCiteText">
-                    経済産業省 2019年3月 － IT 人材需給に関する調査 -->
-                </p>
-            </div>
-        </div>
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q2
-                </h1>
-                <p class="quizQuiz" id="quizQuiz">
-                    <!-- 既存業界のビジネスと、先進的なテクノロジーを結び付けて生まれた、新しいビジネスのことをなんと言うでしょう？ -->
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="../img/img-quiz02.png" class="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
-                </div>
-            </div>
-            <div class="quizBlock">
-                <ul id="quizAnswer" >
-                    <!-- <li class="answerChoice">
-                        INTECH
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        BIZZTECH
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        X-TECH
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li> -->
-                </ul>
-            </div>
-            <div class="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    X-TECH
-                </p>
-            </div> 
-            </div>
-            <div class="answerResultRight answerResult">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    X-TECH
-                </p>
-            </div> 
-            </div>
-        </div>
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q3
-                </h1>
-                <p class="quizQuiz">
-                    loTとは何の略でしょう？
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="../img/img-quiz03.png" class="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
-                </div>
-            </div>
-            <div class="quizBlock">
-                <ul class="quizAnswer">
-                    <li class="answerChoice">
-                        Internet oh Things
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        Integrate into Technology
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        Information on Tool
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                </ul>
-            </div>
-            <div class="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    Internet of Things
-                </p>
-            </div> 
-            </div>
-            <div class="answerResultRight answerResult">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    Internet of Things
-                </p>
-            </div> 
-            </div>
-        </div>
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q4
-                </h1>
-                <p class="quizQuiz">
-                    日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="../img/img-quiz04.png" class="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
-                </div>
-            </div>
-            <div class="quizBlock">
-                <ul class="quizAnswer">
-                    <li class="answerChoice">
-                        Society 5.0
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        CyPhy
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        SDGs
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                </ul>
-            </div>
-            <div class="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    Society5.0
-                </p>
-            </div> 
-            </div>
-            <div class="answerResultRight answerResult">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    Society5.0
-                </p>
-            </div> 
-            </div>
-            <div class="quizCite">
-                <img src="../img/icon-note.png" class="quizNote">
-                <p class="quizCiteText">
-                    Society5.0-科学技術政策-内閣府
-                </p>
-            </div>
-        </div>
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q5
-                </h1>
-                <p class="quizQuiz">
-                    イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="../img/img-quiz05.png" class="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
-                </div>
-            </div>
-            <div class="quizBlock">
-                <ul class="quizAnswer">
-                    <li class="answerChoice">
-                        Web3.0
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        NFT
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        メタバース
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                </ul>
-            </div>
-            <div class="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    web3.0
-                </p>
-            </div> 
-            </div>
-            <div class="answerResultRight answerResult">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    web3.0
-                </p>
-            </div> 
-            </div>
-        </div>
-        <div class="quizOne">
-            <div class="quizText">
-                <h1 class="quizMidasi">
-                    Q6
-                </h1>
-                <p class="quizQuiz">
-                    先進テクノロジー活用企業と出遅れた企業の収益の差はどれくらいあると言われているでしょう？
-                </p>
-            </div>
-            <div class="quizMain">
-                <img src="../img/img-quiz06.png" class="quizPicture">
-            </div>
-            <div class="answerIconBack">
-                <div class="answerIcon quizText">
-                    A
-                </div>
-            </div>
-            <div class="quizBlock">
-                <ul class="quizAnswer">
-                    <li class="answerChoice">
-                        約2倍
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        約5倍
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                    <li class="answerChoice">
-                        約11倍
-                        <img src="../img/icon-arrow.png" class="arrow">
-                    </li>
-                </ul>
-            </div>
-            <div class="answerResult">
-                <h2 class="result">
-                    不正解...
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    約5倍
-                </p>
-            </div> 
-            </div>
-            <div class="answerResultRight answerResult">
-                <h2 class="resultRight result">
-                    正解 !
-                </h2>
-            <div class="answerBlock">
-                <div class="answerFont">
-                    A
-                </div>
-                <p class="answerText">
-                    約5倍
-                </p>
-            </div> 
-            </div>
-            <div class="quizCite">
-                <img src="../img/icon-note.png" class="quizNote">
-                <p class="quizCiteText">
-                    Accenture Technolohy Vision 2021
-                </p>
-            </div>
-        </div>
+            </template>
+        </section>
     </main>
+
     <div class="lineMain main">
         <div class="lineLm main">
             <img src="../img/lineicon.png" class="lineMainIcon">
             <div class="lineM">
-                <h1 class="lineMidasi">POSSE 公式LINE
+                <h1 class="lineTitle">POSSE 公式LINE
                 </h1>
             </div>
         </div>
@@ -477,17 +182,8 @@
         <div class="copyRight">
             <small>©︎2022 POSSE</small>
         </div>
-
     </footer>
-    <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer" class="lineLink">
-        <div class="lineFooter">
-            <img src="../img/lineicon.png" class="lineIcon">
-            <p class="lineText">POSSE公式LINEで
-                <br>最新情報をGET！
-            </p>
-            <img src="../img/icon-link-light.png" class="lineDark">
-        </div>
-    </a>
+
     <script src="quiz.js"></script>
 </body>
 
