@@ -230,7 +230,7 @@ a {
 }
 
 .quizCite {
-  display: flex;
+  display: none;
   align-items: center;
   background-color: rgb(244, 244, 244);
   border-radius: 8px;
