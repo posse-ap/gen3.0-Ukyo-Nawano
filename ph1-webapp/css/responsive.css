@@ -1,0 +1,78 @@
+/* ここからレスポンシブ */
+@media screen and (max-width: 768px) {
+    body {
+        width:100vw;
+        height:100%;
+        margin: 0 auto;
+    }
+
+/* ここからheaderページ */
+.headerButton{
+    display:none;
+}
+
+/* ここからmainLeftページ */
+.main{
+    display: block;
+}
+.mainLeftRight{
+    display: block;
+}
+.mainLeft{
+    margin: 0 auto;
+}
+.hours{
+    margin-top: 80px;
+    width: 100%;
+}
+.barGraph{
+    width: 96%;
+    height:100%;
+}
+
+/* ここからmainRightページ */
+.itemLanguage{
+    width:50%;
+    height:auto
+}
+
+/* ここからfooterページ */
+.footer{
+    width:100%;
+    padding:20px;
+}
+.footerList{
+    width: 100%;
+    display: flex;
+}
+.footerTitle{
+    width: 100%;
+    margin: 0 auto;
+}
+.footerButton{
+    display: block;
+    width:100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* ここからmodalページ */
+.modalMain{
+    top:20%;
+}
+.modalFlex{
+    display: block;
+}
+.modalRight{
+    margin-left: 0%;
+}
+.learnText{
+    width:200%;
+}
+#modalLoad{
+    top:30%;
+}
+#modalAwesome{
+    top:30%;
+}
+}
