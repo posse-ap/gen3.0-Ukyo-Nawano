@@ -236,7 +236,11 @@ a {
   border-radius: 8px;
   width: 100%;
   height:80px;
+<<<<<<<< HEAD:クイズページ/css/quiz.css
   background-image: url(../../img/icon-note.png);
+========
+  background-image: url('../img/icon-note.png');
+>>>>>>>> 077bf285942c62b84dd9ef5c6e3d474a662e559a:ph1-POSSEwebsite/クイズページ/style.css
   background-repeat: no-repeat;
   padding-left: 75px;
   font-weight: bold;

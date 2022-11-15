@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,14 +21,34 @@
         <div class="posseLogo">
             <img src="../img/logo.png" alt="POSSE">
         </div>
+        <input type="checkbox" id="headerButtonClick"></input>
+        <label for="headerButtonClick" class="headerButtonOpen">
+            <span></span>
+        </label>
         <nav class="topHeader">
             <ul class="ulLogo">
                 <li class="topPage">
-                    <a href="../トップページ/toppage.html">POSSEについて</a>
+                    <a href="../トップページ/toppage.html">POSSEとは</a>
                 </li>
                 <li class="topQuiz">
                     <a href="../クイズページ/quiz.html">クイズ</a>
                 </li>
+            </ul>
+            <div class="lineHeader">
+                <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer"
+                    class="lineHeaderLink">
+                    <img src="../img/lineicon.png" class="lineHeaderIcon">
+                    <span class="lineHeaderText">
+                        POSSE公式LINEを追加
+                    </span>
+                    <img src="../img/icon-link-light.png" class="lineHeaderLight">
+            </div>
+            </a>
+            <a href="" class="headerSite">
+                POSSE 公式サイト
+                <img src="../img/icon-link-dark.png" class="LineHeaderDark">
+            </a>
+            <ul class="ulSNS">
                 <li class="twitter">
                     <a href="https://twitter.com/posse_program"><img src="../img/icon-twitter.png" alt="twitter"
                             class="twitterIcon"></a>
@@ -40,7 +61,7 @@
         </nav>
     </header>
 
-    <main>
+    <hero class="hero">
         <div class="heroMain">
             <div class="heroBack">
                 <h1 class="heroTitle">学生プログラミングコミュニティ POSSE（ポッセ）
@@ -56,10 +77,15 @@
         <div>
             <ul>
                 <li class="heroScroll">
-                    <span class="heroScrollSpan">Scroll Down</span>
+                    Scroll Down
                 </li>
             </ul>
         </div>
+    </hero>
+
+
+
+    <main>
 
         <div class="mainPosse">
             <h2 class="mainH">
@@ -81,12 +107,12 @@
                 </p>
             </div>
         </div>
-
     </main>
+
     <div class="lineMain">
         <div class="lineLm">
             <img src="../img/lineicon.png" class="lineMainIcon">
-            <h1 class="lineMidasi">POSSE 公式LINE
+            <h1 class="lineTitle">POSSE 公式LINE
             </h1>
         </div>
         <div class="lineMainText">
@@ -105,6 +131,7 @@
         </a>
     </div>
     </div>
+
     <footer class="footer">
         <div class="posseLogoFooter">
             <img src="../img/logo.png" alt="POSSE">
@@ -127,12 +154,18 @@
         <div class="copyRight">
             <small>©︎2022 POSSE</small>
         </div>
-
     </footer>
+
     <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer" class="lineLink">
         <div class="lineFooter">
             <img src="../img/lineicon.png" class="lineIcon">
-            <p class="lineText">POSSE公式LINEで
+            <p class="lineText">
+                <span class="lineTextP">
+                    POSSE
+                </span>
+                <span>
+                    公式LINEで
+                </span>
                 <br>最新情報をGET！
             </p>
             <img src="../img/icon-link-light.png" class="lineDark">

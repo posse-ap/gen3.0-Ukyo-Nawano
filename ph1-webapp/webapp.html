@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./css/webapp.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="headerInner">
+            <div class="headerFlex">
+                <div class="posseLogo">
+                    <img src="./img/logo.png" class="posseLogoImage">
+                </div>
+                <p class="headerWeek">4th week</p>
+            </div>
+            <button class="postButton headerButton" id="postHeaderButton">
+                記録・投稿
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="mainLeftRight">
+            <div class="mainLeft">
+                <div>
+                    <ul class="ulHours">
+                        <li class="hours">
+                            <div class="hourTitle">Today</div>
+                            <div class="hourNumber">3</div>
+                            <div class="hour">hour</div>
+                        </li>
+                        <li class="hours">
+                            <div class="hourTitle">Month</div>
+                            <div class="hourNumber">120</div>
+                            <div class="hour">hour</div>
+                        </li>
+                        <li class="hours">
+                            <div class="hourTitle">Total</div>
+                            <div class="hourNumber">1348</div>
+                            <div class="hour">hour</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 棒グラフ -->
+                <div class="barGraph">
+                    <canvas id="barGraph">
+                        Canvas not supported...
+                    </canvas>
+                </div>
+            </div>
+
+            <!-- 円グラフ -->
+            <div class="mainRight">
+                <div class="items">
+                    <div class="itemLanguage">
+                        <h1 class="itemTitle">学習言語</h1>
+                        <canvas id="languageChart">
+                            Canvas not supported...
+                        </canvas>
+                        <div class="itemList" id="itemList">
+                            <p class="item">HTML</p>
+                            <p class="item">CSS</p>
+                            <p class="item">JavaScript</p>
+                            <p class="item">PHP</p>
+                            <p class="item">Laravel</p>
+                            <p class="item">SQL</p>
+                            <p class="item">SHELL</p>
+                            <p class="item otherItem">情報システム基礎知識(その他)</p>
+                        </div>
+                    </div>
+                    <div class="itemLanguage">
+                        <h1 class="itemTitle">学習コンテンツ</h1>
+                        <canvas id="subjectChart">
+                            Canvas not supported...
+                        </canvas>
+                        <div class="itemList">
+                            <p class="item">ドットインストール</p>
+                            <p class="item">N予備校</p><br>
+                            <p class="item">POSSE課題</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footerList">
+                <p class="footerTitle">
+                    <span class="footerLeft">&lt;</span>
+                    <span class="footerText">2022年10月</span>
+                    <span class="footerRight">&gt;</span>
+                </p>
+            </div>
+            <button class="postButton footerButton" id="postFooterButton">
+                記録・投稿
+            </button>
+        </footer>
+
+    </main>
+
+</body>
+
+
+<!-- ここからmodalページ -->
+<div class="modalMain" id="modalMain">
+    <div id="modalOverlay">
+        <div class="modalFlex">
+            <div class="modalLeft">
+                <div class="modalCloseButton">
+                    <button type="button" class="closeButton">
+                        <div class="close" id="close">×</div>
+                    </button>
+                </div>
+
+                <section class="learns">
+                    <p class="learnTitle">学習日</p>
+                    <input type="text" id="learnDate" class="learnText">
+                </section>
+
+                <section class="learns">
+                    <p class="learnTitle">学習コンテンツ (複数選択可)</p>
+                    <input id="contents1" type="checkbox" value="N予備校">
+                    <label for="contents1" class="contents">N予備校</label>
+
+                    <input id="contents2" type="checkbox" value="ドットインストール">
+                    <label for="contents2" class="contents">ドットインストール</label>
+
+                    <input id="contents3" type="checkbox" value="POSSE課題">
+                    <label for="contents3" class="contents">POSSE課題</label>
+                </section>
+
+                <section class="learns">
+                    <p class="learnTitle">学習言語 (複数選択可)</p>
+                    <input id="language1" type="checkbox" value="HTML">
+                    <label for="language1" class="contents">HTML</label>
+                    <input id="language2" type="checkbox" value="CSS">
+                    <label for="language2" class="contents">CSS</label>
+                    <input id="language3" type="checkbox" value="JavaScript">
+                    <label for="language3" class="contents">JavaScript</label>
+                    <input id="language4" type="checkbox" value="PHP">
+                    <label for="language4" class="contents">PHP</label>
+                    <input id="language5" type="checkbox" value="Laravel">
+                    <label for="language5" class="contents">Laravel</label>
+                    <input id="language6" type="checkbox" value="SQL">
+                    <label for="language6" class="contents">SQL</label>
+                    <input id="language7" type="checkbox" value="SHELL">
+                    <label for="language7" class="contents">SHELL</label>
+                    <input id="language8" type="checkbox" value="情報システム基礎知識(その他)">
+                    <label for="language8" class="contents">情報システム基礎知識(その他)</label>
+                </section>
+            </div>
+
+            <div class="modalRight">
+                <section class="learns">
+                    <p class="learnTitle">学習時間</p>
+                    <input type="text" class="learnText">
+                </section>
+
+                <section class="learns">
+                    <p class="learnTitle">Twitter用コメント</p>
+                    <textarea id="postTwitter" class="learnText" ></textarea>
+                </section>
+
+                <div class=" twitterLearns">
+                    <input id="twitter" type="checkbox" checked>
+                    <label for="twitter" class="twitterContents contents">Twitterに自動投稿する</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <button type="button" class="postButton modalPostButton" id="modalButton">記録・投稿</button>
+</div>
+
+<!-- ここからmodalローディングページ -->
+<div class="modalLoading">
+    <div class="modalAwesome" id="modalLoad">
+        <button type="button" class="closeButton" >
+            <div class="close" id="close">×</div>
+        </button>
+        <div class="modalContainer">
+            <div class="loader-wrap">
+                <div class="loader">Loading...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ここからmodal Awesomeページ -->
+<div class="modalSuccess" id="modalSuccess">
+    <div class="modalAwesome" id="modalAwesome">
+        <button type="button" class="closeAwesome closeButton">
+            <div class="close" id="close">×</div>
+        </button>
+        <div>
+            <p class="Awesome">AWESOME!</p>
+            <span class="Awesome AwesomeCheck"></span>
+            <p class="AwesomeText">記録・投稿<br>完了しました</p>
+        </div>
+    </div>
+</div>
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="./js/chartjs-plugin-labels.min.js"></script>
+    <script src="./js/barGraph.js"></script>
+    <script src="./js/modalChart.js"></script>
+
+</html>
