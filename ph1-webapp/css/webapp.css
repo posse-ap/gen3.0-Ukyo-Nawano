@@ -170,15 +170,45 @@ footer{
     margin: 0 auto;
     display: none;
 }
-#modal-overlay{
-	z-index:1;
-	display:none;
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:120%;
-	background-color:rgba(0,0,0,0.75);
+.active{
+    animation: slideIn 0.8s;
+}
+@keyframes slideIn {
+    0% {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+    100% {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+.nonactive{
+    animation: slideOut 0.8s;
+    /* display: none; */
+}
+@keyframes slideOut {
+    0% {
+    opacity: 1;
+    transform: translateY(0);
+}
+    100% {
+    opacity: 0;
+    display: none;
+    transform: translateY(-100px);
+}
+}
+.nonactiveLoad{
+    animation: slideOut 2.5s;
+}
+#modalOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
 }
 .modalFlex{
     display: flex;
@@ -317,7 +347,7 @@ footer{
 #modalLoad{
     position: fixed;
     top: 10%;
-    left:100px;
+    left:10%;
     z-index: 1060;
     margin: 0 auto;
     flex-direction: column;
@@ -389,7 +419,7 @@ footer{
 #modalAwesome{
     position: fixed;
     top: 10%;
-    left:100px;
+    left:10%;
     z-index: 1030;
     width:80%;
     display: none;

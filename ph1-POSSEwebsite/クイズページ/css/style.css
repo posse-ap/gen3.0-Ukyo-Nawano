@@ -84,7 +84,7 @@ a {
 
 /* ここからheroページ */
 .itHero {
-  background-image: url(../img/bg-hero.png);
+  background-image: url(../../img/bg-hero.png);
   background-position: center;
   background-size: 110%;
   background-repeat: no-repeat;
@@ -246,7 +246,7 @@ a {
 
 /* ここからLINEmainページ */
 .lineMain {
-  background: url(../img/bg-line.png);
+  background: url(../../img/bg-line.png);
   border-radius: 56px;
   height: 357px;
   padding: 68px;
