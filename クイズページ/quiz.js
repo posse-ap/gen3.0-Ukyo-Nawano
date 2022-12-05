@@ -137,7 +137,6 @@ const createQuizHtml = (quizItem, questionNumber) => {
 ${noteHtml}
 </div>
 </div>`
-    
 };
 
 // 問題文のシャッフル
@@ -171,10 +170,8 @@ quizBlock.forEach(function(num, questionNum){
                     r.classList.add('correct');
                     quizFalse[questionNum].style.display="block";
                     }
-                    
-                })        
+                })
             }
         );
 });
-
 };

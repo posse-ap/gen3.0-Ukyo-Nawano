@@ -166,7 +166,7 @@ main {
 
 /* ここからLINEmainページ */
 .lineMain {
-  background: url(../img/bg-line.png);
+  background: url(../../img/bg-line.png);
   border-radius: 56px;
   width: 984px;
   height: 357px;

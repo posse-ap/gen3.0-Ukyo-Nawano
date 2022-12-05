@@ -3,7 +3,7 @@
         max-width: 768px;
         margin: 0 auto;
     }
-    
+
       /* ここからheaderページ */
     .header{
         padding-top: 30px;
@@ -102,7 +102,7 @@
         height: 48px;
         transform: translate(0px, 26px);
     }
-    
+
     /* ここからheaderLINEページ */
     .lineHeaderLink {
         color: white;
@@ -157,7 +157,7 @@
     #headerButtonClick:checked ~ .topHeader {
         left: 0;
     }
-    
+
     /* ここからHeroページ */
     .itHero{
         width:1000px;
@@ -172,7 +172,7 @@
         margin-bottom: 150px;
         margin-left: 60px;
     }
-    
+
       /* ここからクイズページ */
     main {
         width: 984px;
@@ -195,6 +195,4 @@
         width:950px;
         margin: 0 auto;
     }
-    
     }
-    
