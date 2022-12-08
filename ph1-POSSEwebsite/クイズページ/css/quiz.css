@@ -83,102 +83,180 @@ a {
 }
 
 /* ここからheroページ */
-main {
+.itHero {
+  background-image: url(../../img/bg-hero.png);
+  background-position: center;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: bold;
+  padding-top: 200px;
+  padding-bottom: 40px;
+}
+.quizHero {
   width: 984px;
   margin: 0 auto;
 }
-.heroMain {
-  display: flex;
-  padding-top: 100px;
-}
-.heroBack {
-  align-self: center;
-  background-color: rgb(236, 235, 239);
-  border-radius: 24px;
-  padding: 50px 62px;
-  white-space: nowrap;
+.posseAssessment {
+  font-size: 18px;
   margin: 0 auto;
-  z-index: 0;
 }
-.heroTitle {
-  color: rgb(70, 137, 239);
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.8;
-}
-.heroText {
+.itQuiz {
   font-size: 60px;
-  font-weight: bold;
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-bottom: 150px;
 }
-.mainHero {
-  margin-left: -125px;
+/* ここからQ1ページ */
+.main {
+  width: 984px;
+  margin: 0 auto;
+}
+.quizOne {
   width: 100%;
-  height: 100%;
+  margin-bottom: 128px;
 }
-
-.mainHeroPicture {
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
-}
-.heroScroll {
-  color: gray;
-  bottom: -80px;
-  margin-left: 30px;
-  list-style: disc;
-}
-.heroScrollSpan {
-  color: black;
-}
-/* ここからメインPOSSEページ */
-.mainPosse {
-  margin-top: 150px;
-}
-.mainH {
+.quizIcon {
+  background-color: #0071bc;
+  border-radius: 8px;
+  color: white;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-size: 36px;
+  width: 80px;
+  height: 70px;
   font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px 8px 14px;
+  margin-bottom: 24px;
+}
+#quizQuiz {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.quizMain {
   text-align: center;
+  margin-top: 64px;
 }
-.mainHsub {
-  color: #0071bc;
-  font-size: 14px;
-  padding-top: 15px;
-  padding-bottom: 40px;
+.quizPicture {
+  width: 700px;
 }
-.mainText {
+.answerIconBack {
+  width: 60px;
+  height: 70px;
+  background-color: #e34e70;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 12px 16px 8px 16px;
+}
+.answerIcon {
+  font-size: 36px;
+  color: white;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  font-weight: bold;
+}
+.quizBlock {
+  width: 100%;
+}
+.quizAnswer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background-image: none;
+}
+#quizAnswer > li >button{
+  border: solid 5px rgb(227, 224, 224);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 19px;
+  line-height: 1.8;
+  width: 300px;
+  cursor: pointer;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  background-image:url(../../img/icon-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 50%;
 }
-.mainPicture {
+#quizAnswer > li > button.correct{
+  background-color: #dcebf5;
+  border:solid 5px #0071BC;
+  background-image: none;
+}
+#arrow {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+}
+.answerResultFalse {
+  display: none;
+  background-color: rgb(233, 243, 248);
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 24px 40px;
+}
+.result {
+  color: rgb(55, 102, 255);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.answerResultRight{
+  display: none;
+  background-color:rgb(255, 242, 245);
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 24px 40px;
+}
+.resultRight{
+  color:rgb(227, 78, 112);
+}
+.answerBlock {
+  display: flex;
+  align-items: baseline;
+}
+.answerFont {
+  font-size: 24px;
+  font-weight: bold;
+}
+.answerText {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 18px;
+}
+
+.quizCite {
+  display: none;
+  align-items: center;
+  background-color: rgb(244, 244, 244);
+  border-radius: 8px;
   width: 100%;
-  height: 100%;
-  border-radius: 16px;
-}
-.mainP {
-  line-height: 1.8;
-  font-size: 14px;
-  width: 470px;
+  height:80px;
+  background-image: url(../../img/icon-note.png);
+  background-repeat: no-repeat;
+  padding-left: 75px;
+  font-weight: bold;
+  font-size: 18px;
+  background-position: left 3% bottom 50%;
 }
 
 /* ここからLINEmainページ */
 .lineMain {
-  background: url(../img/bg-line.png);
+  background: url(../../img/bg-line.png);
   border-radius: 56px;
-  width: 984px;
   height: 357px;
   padding: 68px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
   display: flex;
   position: relative;
   margin-bottom: 136px;
-  margin-top: 140px;
+  font-weight: bold;
 }
 .lineMain::before {
   background-color: rgb(0, 113, 201);
@@ -191,34 +269,34 @@ main {
   border-radius: 56px;
   position: absolute;
 }
+.lineLm {
+  align-items: center;
+}
 .lineMainIcon {
   width: 40px;
   height: 40px;
   border-radius: 5px;
   position: absolute;
-  left: 35%;
+  left: 300px;
+}
+.lineM {
+  display: flex;
+  justify-content: center;
 }
 .lineTitle {
   position: absolute;
-  font-size: 40px;
-  font-weight: bold;
-  left: 40%;
+  font-size: 36px;
   color: white;
 }
 .lineMainText {
   position: absolute;
   text-align: center;
-  top: 180px;
+  top: 150px;
   right: 0;
   bottom: 0;
   left: 0;
   line-height: 1.8;
   color: white;
-}
-.lineMainLink {
-  position: absolute;
-  top: 80%;
-  left: 35%;
 }
 .lineWhite {
   position: absolute;
@@ -227,59 +305,25 @@ main {
   border-radius: 50px;
   width: 320px;
   height: 50px;
-  padding: 12px;
+  align-items: center;
   justify-content: center;
+  top: 250px;
+  left: 34%;
 }
 .lined {
   width: 12px;
   height: 12px;
   position: absolute;
   right: 30px;
-  top: 18px;
+  top: 40%;
 }
 .lineMainLink {
   align-items: center;
   background-color: white;
 }
-
-/* ここからLINEフッター */
-.lineLink {
-  color: white;
-  display: flex;
-  align-items: center;
-}
-.lineIcon {
-  width: 36px;
-  height: 36px;
-  border-radius: 5px;
-}
-.lineFooter {
-  background-color: rgb(95, 223, 91);
-  width: 288px;
-  height: 80px;
-  border-radius: 16px;
-  text-align: center;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.lineText {
-  text-align: left;
-  margin-left: 13px;
-  margin-right: 0px;
-  font-weight: bold;
-}
-.lineDark {
-  color: white;
-  margin-left: 25px;
-}
-
+/* ここからフッター */
 /* ここからPOSSEロゴフッター */
 .footer {
-  width: 984px;
   margin: 0 auto;
 }
 .posseLogoFooter {
