@@ -109,8 +109,7 @@ quizBlock.forEach(function(num, questionNum){
                     r.classList.add('correct');
                     quizFalse[questionNum].style.display="block";
                     }
-                    
-                })        
+                })
             }
         );
 });

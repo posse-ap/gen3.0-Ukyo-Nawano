@@ -176,7 +176,7 @@ a {
   height: 80px;
   display: flex;
   align-items: center;
-  background-image:url('../img/icon-arrow.svg');
+  background-image:url('../../img/icon-arrow.svg');
   background-repeat: no-repeat;
   background-position: right 10% bottom 50%;
 }

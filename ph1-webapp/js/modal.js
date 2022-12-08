@@ -11,67 +11,58 @@ const closeAwesome=document.getElementsByClassName('closeAwesome');
 const twitterButton=document.getElementById('modalButton');
 const load=document.getElementById('modalLoad');
 const awesome=document.getElementById('modalAwesome');
+const modalOverlay=document.getElementById('modalOverlay');
 
-// ボタンがクリックされてmodal表示
+// ボタンがクリックされてmodalとoverlay表示
 headerButtonOpen.addEventListener('click', modalOpen);
-function modalOpen() {
-modal.style.display = 'block';
-};
 footerButtonOpen.addEventListener('click', modalOpen);
 function modalOpen() {
-modal.style.display = 'block';
+    modal.style.display = 'block';
+    modalOverlay.style.display='block'
+    modal.classList.add('active')
+    modal.classList.remove('nonactive')
+    load.classList.remove('nonactiveLoad')
+    awesome.classList.remove('nonactive')
 };
 
-// ボタンと×印が押されてmodal閉じる
-buttonClose.addEventListener('click', modalClose);
-function modalClose() {
-modal.style.display = 'none';
+// modal,load,awesome画面を閉じる
+function modalNone(){
+    modal.style.display='none';
+    awesome.style.display='none';
 };
+function loadClose() {
+    load.style.display = 'none';
+};
+
+// ボタンが押されてmodal閉じる
+// 完了画面を表示する
 buttonClose.addEventListener('click', modalLoad);
 function modalLoad() {
-load.style.display = 'block';
-window.setTimeout(loadClose,3000);
-window.setTimeout(loadAwesome,5000);
-};
-
-
-const loadClose=
-function() {
-load.style.display = 'none';
-};
-const loadAwesome=buttonClose.addEventListener('click', modalAwesome);
-function modalAwesome() {
-awesome.style.display = 'block';
+    modal.style.display='none';
+    load.style.display = 'block';
+    awesome.style.display='block';
+    modalOverlay.style.display='block';
+    modal.classList.remove('nonactive');
+    window.setTimeout(loadClose,3000);
 };
 
 // ×が押されて閉じる
+// モーダルコンテンツ以外がクリックされて閉じる
 button0.addEventListener('click', modalClose);
-function modalClose() {
-modal.style.display = 'none';
-load.style.display='none';
-awesome.style.display='none';
-};
 button1.addEventListener('click', modalClose);
-function modalClose() {
-modal.style.display = 'none';
-load.style.display='none';
-awesome.style.display='none';
-};
+modalOverlay.addEventListener('click',modalClose);
 button2.addEventListener('click', modalClose);
 function modalClose() {
-modal.style.display = 'none';
-load.style.display='none';
-awesome.style.display='none';
+    modalOverlay.style.display='none';
+    modal.classList.add('nonactive')
+    modal.classList.remove('active')
+    load.classList.add('nonactiveLoad')
+    awesome.classList.add('nonactive')
+    setTimeout(modalNone,700)
+    setTimeout(loadClose,3000)
 };
 
-// モーダルコンテンツ以外がクリックされた時
-addEventListener('click', outsideClose);
-function outsideClose(e) {
-if (e.target == modal) {
-    modal.style.display = 'none';
-}
-};
-
+// twitterに投稿する
 twitterButton.addEventListener('click', tweet);
 let twitterText=document.getElementById("postTwitter").value;
 function tweet(){
@@ -81,6 +72,6 @@ function tweet(){
     }
 };
 
+// カレンダー
 const learnData = document.getElementById('learnDate');
 const flatpicker = flatpickr(learnData);
-
